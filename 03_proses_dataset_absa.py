@@ -157,8 +157,8 @@ def proses_pipeline():
         print("   Silakan jalankan '02_scrape_ulasan_restoran.py' terlebih dahulu untuk scraping ulasan!")
         return
 
-    df_resto = pd.read_csv(target_resto_file).fillna("")
-    df_reviews = pd.read_csv(REVIEW_FILE).fillna("")
+    df_resto = pd.read_csv(target_resto_file, low_memory=False, dtype=str).fillna("")
+    df_reviews = pd.read_csv(REVIEW_FILE, low_memory=False, dtype=str).fillna("")
 
     # Pastikan kolom-kolom standar ada di df_resto agar tidak KeyError
     for col in ["data_id", "place_id", "url", "rating_rata2", "jumlah_ulasan_total", "kategori", "fasilitas", "telepon", "website", "lat", "lon", "Koordinat"]:

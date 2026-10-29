@@ -365,7 +365,7 @@ def main():
 
     if OUTPUT_REVIEW_FILE.exists():
         try:
-            df_old = pd.read_csv(OUTPUT_REVIEW_FILE)
+            df_old = pd.read_csv(OUTPUT_REVIEW_FILE, low_memory=False)
             if "review_id" in df_old.columns:
                 existing_review_ids = set(df_old["review_id"].dropna().astype(str).unique())
             if "data_id" in df_old.columns:
