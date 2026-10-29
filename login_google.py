@@ -62,5 +62,5 @@ flag_file.write_text("logged_in", encoding="utf-8")
 
 print("\n" + "=" * 65)
 print("🎉 LOGIN BERHASIL DISIMPAN!")
-print("Sekarang Anda bisa menjalankan 'python 02_scrape_ulasan_penginapan.py'.")
+print("Sekarang Anda bisa menjalankan 'python 02_scrape_ulasan_restoran.py'.")
 print("=" * 65)
